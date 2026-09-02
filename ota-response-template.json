@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "readyToServe": false,
+    "image": "x5-patched.img",
+    "sourceResponseCaptured": false,
+    "checkRequestCaptured": true,
+    "checkRequestCapture": "capture/check-version-request.json",
+    "checkVersionPathPattern": "/product/1656323402/{deviceId}/ota/checkVersion",
+    "checkVersionPath": "/product/1656323402/{device_id}/ota/checkVersion",
+    "deviceId": "{device_id}",
+    "localAddressAtCapture": "{research_host_ip}",
+    "deviceRequest": {
+      "mid": "{device_mid}",
+      "productId": "1656323402",
+      "version": "3.4.6",
+      "networkType": "WIFI",
+      "signPreservedOnlyInPrivateCapture": true
+    },
+    "missingBeforeServing": [
+      "fill device_id and device_mid from a private local capture",
+      "generate image digests with tools/patch_adb_hash.py",
+      "keep readyToServe false until the full-image verification passes"
+    ],
+    "segmentSize": 104857600,
+    "segmentEndIsExclusive": true
+  },
+  "wireResponse": {
+    "status": 1000,
+    "msg": "success",
+    "data": {
+      "releaseNotes": {
+        "publishDate": "2026-09-02",
+        "version": "99.99.91",
+        "content": "[{\"country\":\"zh_CN\",\"content\":\"离线研究模板；默认禁止下发\"}]"
+      },
+      "sha256": "{patched_image_sha256}",
+      "safe": {
+        "encKey": null,
+        "isEncrypt": 0
+      },
+      "version": {
+        "segmentMd5": "[{\"num\":0,\"startpos\":0,\"md5\":\"{segment_md5_0}\",\"endpos\":104857600},{\"num\":1,\"startpos\":104857600,\"md5\":\"{segment_md5_1}\",\"endpos\":209715200},{\"num\":2,\"startpos\":209715200,\"md5\":\"{segment_md5_2}\",\"endpos\":314572800},{\"num\":3,\"startpos\":314572800,\"md5\":\"{segment_md5_3}\",\"endpos\":419430400},{\"num\":4,\"startpos\":419430400,\"md5\":\"{segment_md5_4}\",\"endpos\":524288000},{\"num\":5,\"startpos\":524288000,\"md5\":\"{segment_md5_5}\",\"endpos\":629145600},{\"num\":6,\"startpos\":629145600,\"md5\":\"{segment_md5_6}\",\"endpos\":734003200},{\"num\":7,\"startpos\":734003200,\"md5\":\"{segment_md5_7}\",\"endpos\":838860800},{\"num\":8,\"startpos\":838860800,\"md5\":\"{segment_md5_8}\",\"endpos\":943718400},{\"num\":9,\"startpos\":943718400,\"md5\":\"{segment_md5_9}\",\"endpos\":1048576000},{\"num\":10,\"startpos\":1048576000,\"md5\":\"{segment_md5_10}\",\"endpos\":1153433600},{\"num\":11,\"startpos\":1153433600,\"md5\":\"{segment_md5_11}\",\"endpos\":1258291200},{\"num\":12,\"startpos\":1258291200,\"md5\":\"{segment_md5_12}\",\"endpos\":1363148800},{\"num\":13,\"startpos\":1363148800,\"md5\":\"{segment_md5_13}\",\"endpos\":1393242124}]",
+        "bakUrl": "http://${LOCAL_IP}:14514/x5-patched.img",
+        "versionAlias": "",
+        "deltaUrl": "http://${LOCAL_IP}:14514/x5-patched.img",
+        "deltaID": "{delta_id}",
+        "fileSize": 1393242124,
+        "md5sum": "{patched_image_md5}",
+        "versionName": "99.99.91",
+        "sha": "{patched_image_sha256}"
+      },
+      "policy": {
+        "download": [
+          {
+            "key_name": "wifi",
+            "key_message": "仅wifi下载",
+            "key_value": "optional"
+          },
+          {
+            "key_name": "storageSize",
+            "key_message": "存储空间不足",
+            "key_value": "1393242124"
+          },
+          {
+            "key_name": "forceDownload",
+            "key_message": "",
+            "key_value": "false"
+          }
+        ],
+        "install": [
+          {
+            "key_name": "battery",
+            "key_message": "电量不足，请充电后重试！",
+            "key_value": "30"
+          },
+          {
+            "key_name": "rebootUpgrade",
+            "key_message": "",
+            "key_value": "false"
+          },
+          {
+            "key_name": "force",
+            "key_message": "",
+            "key_value": "{\"from\":\"00:00\",\"to\":\"00:00\",\"gap\":\"00:00\"}"
+          }
+        ],
+        "check": [
+          {
+            "key_name": "cycle",
+            "key_message": "",
+            "key_value": "1500"
+          }
+        ]
+      }
+    }
+  }
+}

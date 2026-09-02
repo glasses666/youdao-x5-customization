@@ -1,0 +1,8 @@
+{
+  "client": "{device_ip}",
+  "method": "GET",
+  "host": "{firmware_host}",
+  "path": "/delta/1656323402/{delta_id}/firmware.img?{download_token}",
+  "range": "bytes={start}-{end}",
+  "response_total_bytes": 1393242124
+}

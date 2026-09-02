@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=800, initial-scale=1">
+  <title>X5 Launcher Concept</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      background: #0a0d11;
+      color: #f4f7f8;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 800px; height: 254px; margin: 0; overflow: hidden; }
+    body { display: flex; background: #0a0d11; }
+    aside {
+      width: 182px;
+      height: 254px;
+      padding: 18px 20px;
+      border-right: 1px solid #20262d;
+      background: #0d1116;
+      display: flex;
+      flex-direction: column;
+    }
+    .brand { display: flex; align-items: center; gap: 8px; color: #9aa6b2; font-size: 12px; letter-spacing: .08em; }
+    .brand-mark { width: 7px; height: 7px; border-radius: 50%; background: #41b9ad; box-shadow: 0 0 0 4px #173632; }
+    .clock { margin-top: 22px; font-size: 46px; font-weight: 520; line-height: 1; letter-spacing: -.04em; }
+    .date { margin-top: 8px; color: #86919c; font-size: 14px; }
+    .device {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid #20262d;
+      display: flex;
+      justify-content: space-between;
+      color: #aeb7c0;
+      font-size: 13px;
+    }
+    .online { color: #66c9be; }
+    main { width: 618px; height: 254px; padding: 17px 18px 18px; }
+    header { height: 30px; display: flex; align-items: center; justify-content: space-between; }
+    h1 { margin: 0; font-size: 18px; font-weight: 560; letter-spacing: .01em; }
+    .hint { color: #697580; font-size: 12px; }
+    .apps { display: flex; gap: 10px; margin-top: 11px; }
+    .app {
+      width: 108px;
+      height: 160px;
+      padding: 15px 13px 13px;
+      border: 1px solid #202a33;
+      border-radius: 13px;
+      background: #11171d;
+      color: #acb6bf;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .app.primary { border-color: #315e5a; background: #11201f; color: #63c8bd; }
+    .app svg { width: 38px; height: 38px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .app-name { margin-top: 26px; color: #f0f3f5; font-size: 17px; font-weight: 500; white-space: nowrap; }
+    .app-meta { margin-top: 5px; color: #68747f; font-size: 11px; white-space: nowrap; }
+    .app.primary .app-meta { color: #5d918b; }
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="brand"><span class="brand-mark"></span>YDP X5 · READY</div>
+    <div class="clock">16:58</div>
+    <div class="date">9月2日 · 星期三</div>
+    <div class="device"><span class="online">● 在线</span><span>电量 100%</span></div>
+  </aside>
+  <main>
+    <header><h1>常用工具</h1><span class="hint">向左滑动查看更多</span></header>
+    <section class="apps">
+      <div class="app primary">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 14V8a2 2 0 0 1 2-2h6M26 6h6a2 2 0 0 1 2 2v6M34 26v6a2 2 0 0 1-2 2h-6M14 34H8a2 2 0 0 1-2-2v-6M10 20h20"/></svg>
+        <div class="app-name">扫词</div><div class="app-meta">快速查词</div>
+      </div>
+      <div class="app">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 9h16M15 6v3M10 13c2 6 6 10 13 12M21 13c-2 7-6 12-13 15M25 30l5-14 5 14M27 25h6"/></svg>
+        <div class="app-name">翻译</div><div class="app-meta">多语种</div>
+      </div>
+      <div class="app">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 8h9a4 4 0 0 1 4 4v20a5 5 0 0 0-5-5H8zM32 8h-7a4 4 0 0 0-4 4v20a5 5 0 0 1 5-5h6z"/></svg>
+        <div class="app-name">单词本</div><div class="app-meta">复习与记忆</div>
+      </div>
+      <div class="app">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 23v-5a12 12 0 0 1 24 0v5M8 23h5v10H9a3 3 0 0 1-3-3v-4a3 3 0 0 1 2-3ZM32 23h-5v10h4a3 3 0 0 0 3-3v-4a3 3 0 0 0-2-3Z"/></svg>
+        <div class="app-name">随身听</div><div class="app-meta">听力内容</div>
+      </div>
+      <div class="app">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 29a15 15 0 1 1 24 0M20 20l8-7M12 29h16"/><circle cx="20" cy="20" r="2"/></svg>
+        <div class="app-name">系统状态</div><div class="app-meta">设备与存储</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

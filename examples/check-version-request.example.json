@@ -1,0 +1,8 @@
+{
+  "timestamp": 0,
+  "sign": "{request_signature}",
+  "mid": "{device_mid}",
+  "productId": "1656323402",
+  "version": "3.4.6",
+  "networkType": "WIFI"
+}
