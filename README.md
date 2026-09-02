@@ -1,6 +1,7 @@
-# Youdao X5 firmware research
+# Youdao X5 customization toolkit
 
-有道 X5 词典笔固件、ADB 鉴权、OTA 协议和原生 miniapp 的可复现研究记录。
+有道 X5 词典笔自定义与维护工具集，包含固件分析、ADB 鉴权、OTA 协议和原生
+miniapp 的可复现实现路径。
 
 本仓库只包含自行编写的工具、脱敏协议样例、文档和 miniapp；不包含厂商固件、
 rootfs、抓包、设备标识、密码、SSH 密钥、请求签名或访问令牌。
